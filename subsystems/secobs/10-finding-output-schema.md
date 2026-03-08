@@ -1,5 +1,7 @@
 # 10. Finding Output Schema
 
+Structural note: on conflict, `core/09-finding-output-schema.md` controls.
+
 The finding output schema for V1 is:
 
 ```text
@@ -27,4 +29,3 @@ Normalized schema constraints:
 - `context` must be JSON-serializable
 
 ---
-

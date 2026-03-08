@@ -55,11 +55,16 @@ Resolve duplicate-heading boundary ambiguity by defining canonical precedence an
 ### Uncertain Placement Disposition
 - `archive/raw-heading-split/sentinel-spec-16-1-scope-and-objectives.md` is retained in
   `subsystems/secobs/01-scope-and-objectives.md` as canonical structural placeholder with an explicit note that the source fragment is heading-only.
+<<<<<<< HEAD
 - Follow-up status superseded by the Phase 4 Normalization Policy Lock disposition.
+=======
+- Human follow-up is still required only to determine whether upstream source recovery is needed for missing body text.
+>>>>>>> docs/phase3-structural-review
 
 ### File Movement Summary
 - No curated file was moved between canonical and reference directories in Phase 3.
 - No archive file was modified.
+<<<<<<< HEAD
 
 ## 2026-03-08 - Phase 4 Normalization Baseline
 
@@ -100,3 +105,5 @@ Adopt explicit normalization policy for requirement IDs and missing-source handl
 - Upstream source file `sentinel_canonical_spec_v1.1_reconciled.md` was identified and reviewed.
 - `subsystems/secobs/01-scope-and-objectives.md` is updated with source-derived scope/objective content from the upstream `# 1. Scope and Objectives` section.
 - The recovered text is limited to scope/objective-relevant subsections (`Product Definition`, `Mission`, `Non-Goals`, `Target Use Cases`) to avoid duplicating detailed downstream section content already curated elsewhere.
+=======
+>>>>>>> docs/phase3-structural-review

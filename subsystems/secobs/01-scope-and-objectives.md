@@ -1,5 +1,6 @@
 # 1. Scope and Objectives
 
+<<<<<<< HEAD
 Source note: recovered from `sentinel_canonical_spec_v1.1_reconciled.md` section
 `# 1. Scope and Objectives`. This section captures the upstream scope/objective
 material; detailed processing and interface requirements remain in later sections.
@@ -67,3 +68,8 @@ Typical uses:
 - review authentication and privilege activity
 - identify restart loops or policy denials
 - attach analysis results to incident reports
+=======
+Structural note: the source fragment for this section is heading-only.
+Normative scope and objectives are defined in `subsystems/secobs/00-sentinel-secobs-canonical-engineering-specification.md`
+and `core/01-system-purpose.md`.
+>>>>>>> docs/phase3-structural-review
