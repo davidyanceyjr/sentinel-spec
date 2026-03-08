@@ -1,6 +1,11 @@
 # Sentinel Specification
 
-This is the canonical index for the scaffolded Sentinel specification.
+This document is the canonical entrypoint for the curated Sentinel specification.
+It indexes the promoted specification sections under `core/`, `subsystems/`, and `reference/`.
+
+## Status
+- Phase 2 promotion status: complete first-draft structure populated from `archive/raw-heading-split/` per `PLANS.md`.
+- Source archive status: preserved; no files were removed or rewritten in `archive/raw-heading-split/`.
 
 ## Core
 - [00-sentinel-canonical-engineering-specification.md](core/00-sentinel-canonical-engineering-specification.md)
@@ -89,3 +94,12 @@ This is the canonical index for the scaffolded Sentinel specification.
 
 ## Archive
 - [Raw heading split index](archive/raw-heading-split/README.md)
+
+## Open Structural Items
+- Duplicate classification retained for `archive/raw-heading-split/sentinel-spec-56-8-rule-catalog.md` (mapped to `subsystems/secobs/08-rule-catalog.md`).
+- Uncertain placement retained for `archive/raw-heading-split/sentinel-spec-16-1-scope-and-objectives.md` (heading-only fragment mapped to `subsystems/secobs/01-scope-and-objectives.md`).
+- Reference-only files intentionally excluded from canonical spec body:
+  - `archive/raw-heading-split/sentinel-spec-14-13-original-rule-catalog-and-reference-material.md`
+  - `archive/raw-heading-split/sentinel-spec-57-journald-security-findings-engine.md`
+  - `archive/raw-heading-split/sentinel-spec-58-rule-catalog.md`
+  - `archive/raw-heading-split/sentinel-spec-59-global-threshold-summary.md`
