@@ -104,3 +104,9 @@
 - Files classified: **67**
 - Duplicate headings detected: **7 groups**
 - Uncertain classifications: **1** (`sentinel-spec-16-1-scope-and-objectives.md`)
+
+## Phase 3 Status Note
+
+Phase 1 classifications above remain the historical placement baseline.
+Structural boundary resolutions for duplicate groups and uncertain placement are recorded in `DECISIONS.md` under:
+- `2026-03-08 - Phase 3 Structural Boundary Resolution`
