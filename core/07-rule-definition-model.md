@@ -1,6 +1,8 @@
 # 7. Rule Definition Model
 
-All rules MUST follow this structure.
+## Normative Requirements
+
+- `[CORE-RULE-001]` All rules MUST follow this structure.
 
 ```
 rule_id
@@ -21,4 +23,3 @@ high
 Values outside this enum are invalid.
 
 ---
-

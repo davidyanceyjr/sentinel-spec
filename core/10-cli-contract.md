@@ -12,9 +12,9 @@ Optional flags:
 --verbose  
 --format  
 
-CLI MUST exit non‑zero on parser failure.
+## Normative Requirements
 
-Warnings MUST NOT terminate execution.
+- `[CLI-001]` CLI MUST exit non-zero on parser failure.
+- `[CLI-002]` Warnings MUST NOT terminate execution.
 
 ---
-

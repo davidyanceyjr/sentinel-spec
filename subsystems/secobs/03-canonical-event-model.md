@@ -45,7 +45,8 @@ Field normalization rules:
 - `priority` normalizes `PRIORITY` as an integer when valid
 - `structured_fields` contains bounded canonicalized key/value data required downstream
 
-Parser and normalization stages MUST produce this schema exactly for downstream stages.
+## Normative Requirements
+
+- `[SECOBS-EVENT-001]` Parser and normalization stages MUST produce this schema exactly for downstream stages.
 
 ---
-

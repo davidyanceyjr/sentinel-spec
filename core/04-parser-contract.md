@@ -24,9 +24,11 @@ SYSLOG_IDENTIFIER     -> syslog_identifier
 Additional contract rules:
 
 - `source` is derived during normalization from the best available stable source identifier, preferring `systemd_unit` and otherwise `syslog_identifier`.
-- The parser MUST preserve monotonic `record_index` assignment for each decoded record.
-- The parser MUST tolerate malformed records according to the parser recovery rules elsewhere in this specification; malformed records may be discarded with warnings, but non-fatal record defects MUST NOT force whole-dataset failure.
 - Fatal parser errors are limited to unreadable input, unrecoverable desynchronization, or other explicitly fatal conditions defined by the parser specification.
 
----
+## Normative Requirements
 
+- `[CORE-PARSER-001]` The parser MUST preserve monotonic `record_index` assignment for each decoded record.
+- `[CORE-PARSER-002]` The parser MUST tolerate malformed records according to the parser recovery rules elsewhere in this specification; malformed records may be discarded with warnings, but non-fatal record defects MUST NOT force whole-dataset failure.
+
+---

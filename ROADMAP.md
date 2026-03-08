@@ -39,18 +39,22 @@ Resolve duplicate sections and clarify canonical boundaries.
 
 ## Phase 4 — Specification Normalization
 
-Status: active  
+Status: complete  
 Branch: docs/phase4-normalize-spec  
 Issue: #4
 
 Objective:
 Normalize canonical specification structure and introduce requirement identifiers.
 
+Outcome:
+- Canonical requirement formatting normalized with stable requirement IDs.
+- SecObs `1. Scope and Objectives` restored from upstream reconciled source (`sentinel_canonical_spec_v1.1_reconciled.md`).
+
 ---
 
 ## Phase 5 — Requirement Validation
 
-Status: pending  
+Status: active  
 Issue: #5
 
 Objective:

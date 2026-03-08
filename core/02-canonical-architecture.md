@@ -14,7 +14,8 @@ temporal correlation
 evidence aggregation  
 finding generation
 
-All implementations MUST follow this pipeline order.
+## Normative Requirements
+
+- `[CORE-ARCH-001]` All implementations MUST follow this pipeline order.
 
 ---
-
