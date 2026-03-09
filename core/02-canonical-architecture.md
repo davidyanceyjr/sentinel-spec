@@ -16,6 +16,6 @@ finding generation
 
 ## Normative Requirements
 
-- `[CORE-ARCH-001]` All implementations MUST follow this pipeline order.
+- `[CORE-ARCH-001]` All implementations MUST execute top-level pipeline stages in this order: Parser, Classifier, Finding Engine, Output Generator.
 
 ---

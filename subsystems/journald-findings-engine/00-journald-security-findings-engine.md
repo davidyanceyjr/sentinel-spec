@@ -9,6 +9,29 @@
 
 ------------------------------------------------------------------------
 
+## Normative Requirements
+
+- `[JFE-BASE-001]` Each event MUST maintain a stable evidence reference.
+- `[JFE-BASE-002]` Each finding MUST reference evidence records.
+- `[JFE-BASE-003]` Rules MUST define explicit time windows.
+- `[JFE-BASE-004]` Boot boundaries SHOULD segment analysis by default.
+- `[JFE-BASE-005]` JSON output structure MUST include `schema_version`, tool metadata, dataset summary, findings, and warnings.
+- `[JFE-BASE-006]` JSON schema MUST be versioned and stable.
+- `[JFE-BASE-007]` The parser MUST tolerate missing fields.
+- `[JFE-BASE-008]` The parser MUST skip malformed records safely.
+- `[JFE-BASE-009]` The parser MUST enforce size limits.
+- `[JFE-BASE-010]` The parser MUST never crash on bad input.
+- `[JFE-BASE-011]` Skipped records MUST be reported.
+- `[JFE-BASE-012]` The analyzer MUST process input in streaming fashion.
+- `[JFE-BASE-013]` The analyzer MUST use bounded memory.
+- `[JFE-BASE-014]` The analyzer MUST handle large exports safely.
+- `[JFE-BASE-015]` The tool MUST avoid storing entire datasets in memory when possible.
+- `[JFE-BASE-016]` Implementations MUST use strict bounds checking, safe string handling, avoid format-string vulnerabilities, enforce field size limits, and preserve predictable memory ownership.
+- `[JFE-BASE-017]` Evidence previews MUST be safely truncated.
+- `[JFE-BASE-018]` Dependencies SHOULD remain minimal (POSIX + libc).
+- `[JFE-BASE-019]` Corpus fixtures MUST include SSH brute force patterns, authentication failures, service restart loops, SELinux/AppArmor denials, and malformed exports.
+- `[JFE-BASE-020]` Identical inputs MUST produce identical findings.
+
 ## 1. Product Definition
 
 V1 is a deterministic command-line analyzer written in **pure C17** that
@@ -475,4 +498,3 @@ and produces deterministic, evidence‑backed security findings.**
 
 
 ---
-

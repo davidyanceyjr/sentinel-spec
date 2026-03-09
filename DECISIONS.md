@@ -55,16 +55,11 @@ Resolve duplicate-heading boundary ambiguity by defining canonical precedence an
 ### Uncertain Placement Disposition
 - `archive/raw-heading-split/sentinel-spec-16-1-scope-and-objectives.md` is retained in
   `subsystems/secobs/01-scope-and-objectives.md` as canonical structural placeholder with an explicit note that the source fragment is heading-only.
-<<<<<<< HEAD
 - Follow-up status superseded by the Phase 4 Normalization Policy Lock disposition.
-=======
-- Human follow-up is still required only to determine whether upstream source recovery is needed for missing body text.
->>>>>>> docs/phase3-structural-review
 
 ### File Movement Summary
 - No curated file was moved between canonical and reference directories in Phase 3.
 - No archive file was modified.
-<<<<<<< HEAD
 
 ## 2026-03-08 - Phase 4 Normalization Baseline
 
@@ -105,5 +100,123 @@ Adopt explicit normalization policy for requirement IDs and missing-source handl
 - Upstream source file `sentinel_canonical_spec_v1.1_reconciled.md` was identified and reviewed.
 - `subsystems/secobs/01-scope-and-objectives.md` is updated with source-derived scope/objective content from the upstream `# 1. Scope and Objectives` section.
 - The recovered text is limited to scope/objective-relevant subsections (`Product Definition`, `Mission`, `Non-Goals`, `Target Use Cases`) to avoid duplicating detailed downstream section content already curated elsewhere.
-=======
->>>>>>> docs/phase3-structural-review
+
+## 2026-03-09 - Phase 5 Requirement Validation and Testability Baseline
+
+### Decision
+Establish a first-pass validation baseline by mapping all currently ID-backed
+canonical requirements to explicit acceptance criteria and a traceability matrix,
+while recording unresolved ambiguity as validation gaps instead of introducing
+new behavioral assumptions.
+
+### Outcome
+- `validation/acceptance-criteria.md` now contains acceptance checks for all
+  currently identified requirement IDs in `core/` and `subsystems/secobs/`.
+- `validation/traceability-matrix.md` now maps requirement IDs to source files,
+  acceptance criteria IDs, verification methods, and readiness status.
+- `core/02-canonical-architecture.md` wording is tightened for `CORE-ARCH-001`
+  to make the required top-level stage order explicit.
+- `core/10-cli-contract.md` wording is tightened for `CLI-001`, and `CLI-003`
+  is added to formalize already-declared required flags (`--input`, `--output`,
+  `--rules`) as a testable requirement.
+
+### Validation Gaps Recorded
+- `VG-001`: `CORE-SVC-001` does not define a formal conformance rule for
+  "systemd unit format".
+- `VG-002`: `CORE-RULE-001` does not explicitly define strictness for extra
+  fields/cardinality in rule objects.
+- `VG-003`: `CORE-FIND-003` requires bounded `context`, but no concrete bound
+  is defined.
+- `VG-004`: `CORE-PARSER-002` references parser recovery behavior that exists
+  in parser subsystem documents but is not fully normalized into requirement IDs.
+- `VG-005`: Multiple subsystem files in
+  `subsystems/journald-findings-engine/` and `subsystems/journald-parser/`
+  contain normative-style statements without requirement IDs, reducing
+  validation traceability coverage.
+
+## 2026-03-09 - Phase 5 Validation Gap Resolution Update
+
+### Decision
+Apply explicit requirement-level resolutions for validation gaps `VG-001`
+through `VG-004` using narrowly scoped normative wording updates.
+
+### Outcome
+- `VG-001` resolved:
+  - `CORE-SVC-001` now defines systemd unit naming shape as
+    `<unit-name>.<unit-type>` with non-empty `<unit-name>` and lowercase
+    alphabetic `<unit-type>`.
+- `VG-002` resolved:
+  - `CORE-RULE-001` now explicitly defines required top-level rule fields.
+  - New requirement `CORE-RULE-002` constrains optional extension data to a
+    top-level `extensions` object and disallows unknown top-level fields.
+- `VG-003` resolved:
+  - `CORE-FIND-003` now defines bounded `context` as UTF-8 JSON serialized
+    size of no more than 4096 bytes.
+- `VG-004` resolved:
+  - `subsystems/journald-parser/12-recovery-rules.md` now includes
+    `JPARSER-RECOVERY-001` through `JPARSER-RECOVERY-003`.
+  - `CORE-PARSER-002` now explicitly references those recovery requirements.
+
+### Remaining Open Gap
+- `VG-005` remains open for subsystem documents containing normative-style
+  statements without requirement IDs.
+
+## 2026-03-09 - Phase 5 VG-005 Narrow Normalization Pass
+
+### Decision
+Execute a narrow requirement-ID normalization pass for the 10 files explicitly
+listed under `VG-005`, without broad structural rewrite or semantic expansion.
+
+### Outcome
+- Added requirement-ID backed normative sections to:
+  - `subsystems/journald-findings-engine/00-journald-security-findings-engine.md`
+  - `subsystems/journald-findings-engine/04-stage-definitions.md`
+  - `subsystems/journald-findings-engine/06-memory-ownership-and-lifetime.md`
+  - `subsystems/journald-findings-engine/08-determinism-requirements.md`
+  - `subsystems/journald-parser/03-parser-design-requirements.md`
+  - `subsystems/journald-parser/09-record-boundaries.md`
+  - `subsystems/journald-parser/10-duplicate-fields.md`
+  - `subsystems/journald-parser/13-raw-record-output-contract.md`
+  - `subsystems/journald-parser/15-security-requirements.md`
+  - `subsystems/journald-parser/17-complexity-guarantees.md`
+- Added validation coverage rows for new requirement-ID ranges in:
+  - `validation/acceptance-criteria.md`
+  - `validation/traceability-matrix.md`
+
+### Residual Gap Status
+- `VG-005` is narrowed but not fully closed.
+- Remaining non-ID normative-style statements are currently tracked in:
+  - `subsystems/journald-findings-engine/05-evidence-references.md`
+  - `subsystems/journald-findings-engine/10-testing-strategy-by-stage.md`
+  - `subsystems/journald-findings-engine/12-design-goals.md`
+  - `subsystems/journald-parser/04-export-record-structure.md`
+  - `subsystems/journald-parser/08-binary-fields.md`
+  - `subsystems/journald-parser/16-parser-test-corpus.md`
+  - `subsystems/journald-parser/18-output-guarantees.md`
+
+## 2026-03-09 - Phase 5 VG-005 Second Narrow Pass and Closure
+
+### Decision
+Execute a second narrow requirement-ID normalization pass for the residual
+`VG-005` file set and close `VG-005` if no in-scope subsystem file with
+normative language remains without requirement IDs.
+
+### Outcome
+- Added requirement-ID backed normative sections to:
+  - `subsystems/journald-findings-engine/05-evidence-references.md`
+  - `subsystems/journald-findings-engine/10-testing-strategy-by-stage.md`
+  - `subsystems/journald-findings-engine/12-design-goals.md`
+  - `subsystems/journald-parser/04-export-record-structure.md`
+  - `subsystems/journald-parser/08-binary-fields.md`
+  - `subsystems/journald-parser/16-parser-test-corpus.md`
+  - `subsystems/journald-parser/18-output-guarantees.md`
+- Added corresponding acceptance and traceability coverage rows in:
+  - `validation/acceptance-criteria.md`
+  - `validation/traceability-matrix.md`
+
+### Verification and Disposition
+- Verification scan result: no file in
+  `subsystems/journald-findings-engine/` or `subsystems/journald-parser/`
+  containing normative language (`MUST/SHOULD/MAY` forms) is currently without
+  at least one requirement ID.
+- `VG-005` is closed for the normalized scope.

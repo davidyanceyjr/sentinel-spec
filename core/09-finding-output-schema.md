@@ -23,7 +23,7 @@ Finding {
 
 - `[CORE-FIND-001]` `evidence_refs[]` MUST contain `EvidenceRef` objects.
 - `[CORE-FIND-002]` `evidence_count` MUST equal the number of retained `evidence_refs[]`.
-- `[CORE-FIND-003]` `context` MUST be JSON-serializable and bounded.
+- `[CORE-FIND-003]` `context` MUST be JSON-serializable and MUST serialize to no more than 4096 bytes in UTF-8 JSON encoding.
 
 ## Schema Notes
 

@@ -29,6 +29,6 @@ Additional contract rules:
 ## Normative Requirements
 
 - `[CORE-PARSER-001]` The parser MUST preserve monotonic `record_index` assignment for each decoded record.
-- `[CORE-PARSER-002]` The parser MUST tolerate malformed records according to the parser recovery rules elsewhere in this specification; malformed records may be discarded with warnings, but non-fatal record defects MUST NOT force whole-dataset failure.
+- `[CORE-PARSER-002]` The parser MUST tolerate malformed records according to recovery requirements `JPARSER-RECOVERY-001` through `JPARSER-RECOVERY-003`; malformed records may be discarded with warnings, but non-fatal record defects MUST NOT force whole-dataset failure.
 
 ---

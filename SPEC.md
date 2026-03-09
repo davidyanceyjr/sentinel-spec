@@ -7,10 +7,7 @@ It indexes the promoted specification sections under `core/`, `subsystems/`, and
 - Phase 2 promotion status: complete first-draft structure populated from `archive/raw-heading-split/` per `PLANS.md`.
 - Source archive status: preserved; no files were removed or rewritten in `archive/raw-heading-split/`.
 - Phase 3 boundary status: duplicate-heading boundaries resolved with explicit canonical precedence in `DECISIONS.md`.
-<<<<<<< HEAD
 - Phase 4 normalization status: normative sections normalized with requirement IDs for existing normative statements.
-=======
->>>>>>> docs/phase3-structural-review
 
 ## Core
 - [00-sentinel-canonical-engineering-specification.md](core/00-sentinel-canonical-engineering-specification.md)
@@ -102,14 +99,9 @@ It indexes the promoted specification sections under `core/`, `subsystems/`, and
 
 ## Structural Boundary Notes
 - Canonical precedence for overlapping sections is defined in `DECISIONS.md` (Phase 3 entry).
-<<<<<<< HEAD
 - Requirement ID scheme and normalization scope are defined in `DECISIONS.md` (Phase 4 entry).
 - `subsystems/secobs/08-rule-catalog.md` is a canonical bridge pointer; detailed rule catalog content is reference-only.
 - `subsystems/secobs/01-scope-and-objectives.md` is restored from upstream reconciled source with scope/objective-relevant content.
-=======
-- `subsystems/secobs/08-rule-catalog.md` is a canonical bridge pointer; detailed rule catalog content is reference-only.
-- `subsystems/secobs/01-scope-and-objectives.md` remains a canonical structural placeholder from a heading-only source fragment.
->>>>>>> docs/phase3-structural-review
 - Reference-only files intentionally excluded from canonical spec body:
   - `archive/raw-heading-split/sentinel-spec-14-13-original-rule-catalog-and-reference-material.md`
   - `archive/raw-heading-split/sentinel-spec-57-journald-security-findings-engine.md`
