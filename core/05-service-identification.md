@@ -7,7 +7,7 @@ Service detection follows this rule:
 
 ## Normative Requirements
 
-- `[CORE-SVC-001]` Canonical service names MUST use systemd unit format.
+- `[CORE-SVC-001]` Canonical service names MUST match the systemd unit naming shape `<unit-name>.<unit-type>`, where `<unit-name>` is non-empty and `<unit-type>` is lowercase alphabetic.
 
 Examples:
 

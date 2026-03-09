@@ -1,5 +1,19 @@
 # 3. Stage Definitions
 
+## Normative Requirements
+
+- `[JFE-STAGE-001]` The stream reader MUST NOT interpret record structure or field semantics.
+- `[JFE-STAGE-002]` The format decoder MUST NOT classify security-relevant behavior.
+- `[JFE-STAGE-003]` The record normalizer MAY ignore unknown fields unless later stages explicitly require them.
+- `[JFE-STAGE-004]` Absent canonical-event fields MUST be represented explicitly and MUST NOT be guessed.
+- `[JFE-STAGE-005]` The event classifier MUST be deterministic and conservative.
+- `[JFE-STAGE-006]` The classified-event `context` object MUST remain bounded.
+- `[JFE-STAGE-007]` The classified-event `context` object MUST NOT contain arbitrary whole-record dumps.
+- `[JFE-STAGE-008]` The finding engine MUST NOT depend on parser internals.
+- `[JFE-STAGE-009]` Evidence references in findings MUST point to parsed dataset records.
+- `[JFE-STAGE-010]` Overlapping findings MAY merge only according to rule-specific policies.
+- `[JFE-STAGE-011]` Output renderers MUST NOT perform classification or rule logic.
+
 ## 3.1 Stream Reader
 
 Purpose:
@@ -301,4 +315,3 @@ Responsibilities:
 Renderers must not perform classification or rule logic.
 
 ------------------------------------------------------------------------
-
