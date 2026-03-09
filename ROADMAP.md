@@ -9,7 +9,7 @@ This document tracks the phases used to build and refine the Sentinel specificat
 
 Status: complete  
 Branch: docs/phase1-classification  
-Issue: #1
+Issue: not tracked in Github
 =======
 This document tracks the phases required to evolve the Sentinel specification
 from raw extracted material into a stable canonical specification.
@@ -39,7 +39,7 @@ Classify mechanically split sections and determine canonical placement.
 
 Status: complete  
 Branch: docs/phase2-promote-curated-draft  
-Issue: #2
+Issue: not tracke in Github
 =======
 Deliverables:
 - mapping plan recorded in PLANS.md
@@ -67,7 +67,8 @@ Promote raw split files into curated repository directories.
 
 Status: complete  
 Branch: docs/phase3-structural-review  
-Issue: #3
+Issue: not tracke in Github
+
 =======
 Deliverables:
 - `core/`, `subsystems/`, and `reference/` populated
@@ -95,7 +96,7 @@ Resolve duplicate sections and clarify canonical boundaries.
 
 Status: complete  
 Branch: docs/phase4-normalize-spec  
-Issue: #4
+Issue: #1
 
 Objective:
 Normalize canonical specification structure and introduce requirement identifiers.
@@ -109,7 +110,7 @@ Outcome:
 ## Phase 5 — Requirement Validation
 
 Status: active  
-Issue: #5
+Issue: #2
 
 Objective:
 Ensure all normative requirements are testable.
