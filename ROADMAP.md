@@ -19,7 +19,7 @@ Classify mechanically split sections and determine canonical placement.
 
 Status: complete  
 Branch: docs/phase2-promote-curated-draft  
-Issue: not tracke in Github
+Issue: not tracked in GitHub
 
 Objective:
 Promote raw split files into curated repository directories.
@@ -30,7 +30,7 @@ Promote raw split files into curated repository directories.
 
 Status: complete  
 Branch: docs/phase3-structural-review  
-Issue: not tracke in Github
+Issue: not tracked in GitHub
 
 
 Objective:
@@ -55,7 +55,7 @@ Outcome:
 
 ## Phase 5 — Requirement Validation
 
-Status: active  
+Status: complete  
 Issue: #2
 
 Objective:
@@ -65,7 +65,7 @@ Ensure all normative requirements are testable.
 
 ## Phase 6 — Consistency Review
 
-Status: pending  
+Status: active  
 Issue: #6
 
 Objective:
